@@ -1,0 +1,156 @@
+﻿/* App specific CSS for Visual Styles */
+
+/* High Contrast Styling */
+.visualmode-contrast body {
+--graphs-opacity:0;
+--page-opacity:1;
+}
+
+.visualmode-contrast .proc_page .upper span:hover, 
+.visualmode-contrast .proc_page .header.item:hover {
+	background-color:var(--highlight-background-color);
+	color:var(--highlight-text-background-color);
+}
+
+.visualmode-contrast .tabs a:hover,
+.visualmode-contrast .page box.left .button:hover {
+	background-color:var(--highlight-text-background-color);
+	border-color:var(--highlight-background-color);
+	color:var(--highlight-background-color);
+}
+
+.visualmode-contrast [page*="calculator"] .tabs .calculator,
+.visualmode-contrast [page*="convertor"] .tabs .convertor,
+.visualmode-contrast [page*="settings"] .tabs .settings,
+.visualmode-contrast .tabs .cpe-dropdown:focus > a,
+.visualmode-contrast .tabs .cpe-dropdown:focus-within > a {
+	background-color:var(--highlight-background-color);
+	border-color:var(--highlight-background-color);
+	color:var(--highlight-text-background-color);
+}
+
+.visualmode-contrast main.performance footer.upper,
+.visualmode-contrast .settings_page .upper,
+.visualmode-contrast .proc_page footer {
+	background-color:transparent;
+}
+
+/** General **/
+/* Standard */
+.visualstyle-general .tabs a:hover {
+	background-color:var(--hyperlink-background-color);
+	border-color:var(--hyperlink-background-color);
+	color:var(--hyperlink-foreground-color);
+}
+
+.visualstyle-general [page*="calculator"] .tabs .calculator,
+.visualstyle-general [page*="convertor"] .tabs .convertor,
+.visualstyle-general [page*="settings"] .tabs .settings,
+.visualstyle-general .tabs .cpe-dropdown:focus > a,
+.visualstyle-general .tabs .cpe-dropdown:focus-within > a {
+	background-color:var(--hyperlink-background-color-hover);
+	border-color:var(--hyperlink-background-color-hover);
+	color:var(--hyperlink-foreground-color-inverted);
+}
+
+
+/* High Contrast */
+.visualstyle-general.visualmode-contrast .proc_page .upper span:hover, 
+.visualstyle-general.visualmode-contrast .proc_page .header.item:hover {
+	background-color:var(--hyperlink-background-color);
+	color:var(--hyperlink-foreground-color);
+}
+
+/** Basic **/
+/* Standard */
+.visualstyle-basic .tabs a {
+	border-color:var(--luna-foreground-color);
+	color:var(--luna-foreground-color);
+}
+
+.visualstyle-basic .tabs a:hover {
+	color:var(--luna-foreground-color-hover);
+	border-color:var(--luna-foreground-color-hover);
+	background-color:rgb(from var(--luna-hyperlink-background-color) r g b / 0.2);
+}
+
+.visualstyle-basic [page*="calculator"] .tabs .calculator,
+.visualstyle-basic [page*="convertor"] .tabs .convertor,
+.visualstyle-basic [page*="settings"] .tabs .settings,
+.visualstyle-basic .tabs .cpe-dropdown:focus > a,
+.visualstyle-basic .tabs .cpe-dropdown:focus-within > a {
+	color:var(--luna-foreground-color-hover);
+	border-color:var(--luna-foreground-color-hover);
+	background-color:rgb(from var(--luna-hyperlink-background-color) r g b / 0.4);
+}
+
+.visualstyle-basic .proc_page .upper span:hover, 
+.visualstyle-basic .proc_page .header.item:hover {
+	background-color:var(--hyperlink-fadeout-color);
+}
+
+
+/* High Contrast */
+.visualstyle-basic.visualmode-contrast .proc_page .upper span:hover, 
+.visualstyle-basic.visualmode-contrast .proc_page .header.item:hover {
+	background-color:var(--highlight-background-color);
+	color:var(--highlight-text-background-color);
+}
+
+.visualstyle-basic.visualmode-contrast .tabs a {
+	background-clip:padding-box;
+	background-color:var(--canvas-background-color);
+	border-color:transparent;
+	color:var(--canvas-text-background-color);
+}
+
+.visualstyle-basic.visualmode-contrast .tabs a:hover {
+	background-color:var(--canvas-secondary-background-color);
+	border-color:var(--canvas-text-secondary-background-color);
+	color:var(--canvas-text-secondary-background-color);
+}
+
+.visualstyle-basic.visualmode-contrast [page*="calculator"] .tabs .calculator,
+.visualstyle-basic.visualmode-contrast [page*="convertor"] .tabs .convertor,
+.visualstyle-basic.visualmode-contrast [page*="settings"] .tabs .settings,
+.visualstyle-basic.visualmode-contrast .tabs .cpe-dropdown:focus > a,
+.visualstyle-basic.visualmode-contrast .tabs .cpe-dropdown:focus-within > a {
+	background-color:var(--highlight-background-color);
+	border-color:var(--canvas-text-secondary-background-color);
+	color:var(--highlight-text-background-color);
+}
+
+/** Simple **/
+/* Standard */
+.visualstyle-simple .tabs a:hover,
+.visualstyle-simple [page*="calculator"] .tabs .calculator,
+.visualstyle-simple [page*="convertor"] .tabs .convertor,
+.visualstyle-simple [page*="settings"] .tabs .settings,
+.visualstyle-simple .tabs .cpe-dropdown:focus > a,
+.visualstyle-simple .tabs .cpe-dropdown:focus-within > a {
+	background-color:rgb(from var(--canvas-secondary-background-color-hover) r g b / var(--mica-opacity-2));
+	color:var(--canvas-secondary-foreground-color-inverted);
+	animation:none;
+	border-color:rgb(from var(--canvas-foreground-color) r g b / 0.2);
+}
+
+
+/* High Contrast */
+.visualstyle-simple.visualmode-contrast .proc_page .upper span:hover, 
+.visualstyle-simple.visualmode-contrast .proc_page .header.item:hover {
+	background-color:var(--canvas-foreground-color);
+	color:var(--canvas-background-color);
+}
+
+.visualstyle-simple.visualmode-contrast .tabs a:hover,
+.visualstyle-simple.visualmode-contrast [page*="calculator"] .tabs .calculator,
+.visualstyle-simple.visualmode-contrast [page*="convertor"] .tabs .convertor,
+.visualstyle-simple.visualmode-contrast [page*="settings"] .tabs .settings,
+.visualstyle-simple.visualmode-contrast .tabs .cpe-dropdown:focus > a,
+.visualstyle-simple.visualmode-contrast .tabs .cpe-dropdown:focus-within > a {
+	background-color:var(--canvas-secondary-foreground-color);
+	color:var(--canvas-secondary-background-color);
+	box-shadow:none;
+	animation:none;
+	border-color:rgb(from var(--canvas-secondary-background-color-hover) r g b / 0.5);
+}

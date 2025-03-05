@@ -1,0 +1,1541 @@
+﻿<html class="main">
+	<body onfocus="CheckTheme()" page="calculator" onblur="CheckTheme()"  class="calculator" style="overflow:hidden;" id="Handler" onclick="">
+	<div style="position:absolute; z-index:-1;">
+		<div class="cpe-system-colors dcm-standard">
+			<span class="fc-canvas" style="color:window; color:canvas;"></span>
+			<span class="fc-canvastext" style="color:windowtext; color:canvastext;"></span>
+			<span class="fc-linktext" style="color:highlight; color:linktext;"></span>
+			<span class="fc-visitedtext" style="color:highlight; color:visitedtext;"></span>
+			<span class="fc-activetext" style="color:highlight; color:activetext;"></span>
+			<span class="fc-buttonface" style="color:buttonface;"></span>
+			<span class="fc-buttontext" style="color:buttontext;"></span>
+			<span class="fc-buttonborder" style="color:buttontext; color:buttonborder;"></span>
+			<span class="fc-field" style="color:window; color:canvas; color:field;"></span>
+			<span class="fc-fieldtext" style="color:windowtext; color:canvastext; color:fieldtext;"></span>
+			<span class="fc-highlight" style="color:highlight;"></span>
+			<span class="fc-highlighttext" style="color:highlighttext;"></span>
+			<span class="fc-selecteditem" style="color:highlight; color:selecteditem;"></span>
+			<span class="fc-selecteditemtext" style="color:highlighttext; color:selecteditemtext;"></span>
+			<span class="fc-mark" style="color:yellow; color:mark;"></span>
+			<span class="fc-marktext" style="color:black; color:marktext;"></span>
+			<span class="fc-graytext" style="color:graytext;"></span>
+			<span class="fc-accentcolor" style="color:highlight;color:accentcolor;"></span>
+			<span class="fc-accentcolortext" style="color:highlighttext; color:accentcolortext;"></span>
+		</div>
+		<div class="cpe-system-colors dcm-reversi">
+			<span class="fc-canvas" style="color:windowtext; color:canvastext;"></span>
+			<span class="fc-canvastext" style="color:window; color:canvas;"></span>
+			<span class="fc-linktext" style="color:highlight;"></span>
+			<span class="fc-visitedtext" style="color:highlight;"></span>
+			<span class="fc-activetext" style="color:highlight;"></span>
+			<span class="fc-buttonface" style="color:buttontext;"></span>
+			<span class="fc-buttontext" style="color:buttonface;"></span>
+			<span class="fc-buttonborder" style="color:buttonface"></span>
+			<span class="fc-field" style="color:windowtext; color:canvastext; color:fieldtext;"></span>
+			<span class="fc-fieldtext" style="color:window; color:canvas; color:field;"></span>
+			<span class="fc-highlight" style="color:highlight; color:linktext;"></span>
+			<span class="fc-highlighttext" style="color:canvastext;"></span>
+			<span class="fc-selecteditem" style="color:highlight; color:selecteditem;"></span>
+			<span class="fc-selecteditemtext" style="color:highlighttext; color:selecteditemtext;"></span>
+			<span class="fc-mark" style="color:yellow; color:mark;"></span>
+			<span class="fc-marktext" style="color:black; color:marktext;"></span>
+			<span class="fc-graytext" style="color:graytext;"></span>
+			<span class="fc-accentcolor" style="color:highlight;color:accentcolor;"></span>
+			<span class="fc-accentcolortext" style="color:highlighttext; color:accentcolortext;"></span>
+		</div>
+		<!-- Theming (Standard Color Scheme) -->
+		<div class="cpe-theming visualcolors-standard colorscheme-light theme-A"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-light theme-B"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-light theme-C"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-light theme-D"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-light theme-E"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-light theme-F"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-light theme-G"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-light theme-H"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-dark theme-A"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-dark theme-B"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-dark theme-C"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-dark theme-D"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-dark theme-E"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-dark theme-F"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-dark theme-G"></div>
+		<div class="cpe-theming visualcolors-standard colorscheme-dark theme-H"></div>
+
+		<!-- Theming 3 (DCM Color Scheme) -->
+		<div class="cpe-theming visualcolors-nocolormanagement"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-standard"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-lite"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-general"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-basic"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-simple"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-classic"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-contrast"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-retro"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-custom_1"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-custom_2"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-custom_3"></div>
+		<div class="cpe-theming visualcolors-nocolormanagement dcmmode-custom_4"></div>
+	</div>
+	<div class="filter-overlay"></div>
+	<div tabindex="-1" class="focus-overlay" style="pointer-events:none;"></div>
+	<div id="LunaLevit" style=" pointer-events: none; position: fixed; z-index: -2; width: 100%; height: 100%;">
+		<div class="invertion-on" style=" pointer-events: none; position: fixed; z-index: -2; width: 100%; height: 100%;">
+			<div id="LunaLevit3" class="desktop-background fandom-community-header__background" style="position:absolute; pointer-events:none;" id="desktop-background">
+			</div>
+		</div>
+	</div>
+	<div class="top-gap" style="pointer-events:none;"></div>
+		<container>
+			<div class="tabs-with-page">
+			<header class="tabs">
+				<div class="lunalevit"></div>
+				<div class="items">
+					<a class="calculator has-icon" onclick="Tab0()">Αριθμομηχανή</a>
+					<a class="convertor has-icon" onclick="Tab1()">Μετατροπέας</a>
+				</div>
+				<div class="separator"></div>
+				<a class="settings has-icon" onclick="Tab2()">Ρυθμίσεις</a>
+			</header>
+			<!--Calculator-->
+			<main class="calculator">
+				<div class="proc_page">
+					<section>
+						<footer>
+							<div class="lunalevit"></div>
+							<h2>Αριθμομηχανή</h2>
+							<div class="cpe-button-group">
+								<div class="cpe-dropdown trigonometry">
+									<button class="cpe-button is-tertiary is-unaccented">
+									<span translate="no" class="cpe-icon cpe-icon-small material-icons">square_foot</span>
+									<span>Τριγωνομετρία</span>
+											<span translate="no" class="cpe-icon cpe-icon-large cpe-icon-tiny cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+									</button>
+									<div class="cpe-dropdown__content">
+										<ul class="cpe-list is-linked">
+											<li>
+												<a onclick="sin()">sin</a>
+											</li>
+											<li>
+												<a onclick="cos()">cos</a>
+											</li>
+											<li>
+												<a onclick="tan()">tan</a>
+											</li>
+											<li>
+												<a onclick="sec()">sec</a>
+											</li>
+											<li>
+												<a onclick="csc()">csc</a>
+											</li>
+											<li>
+												<a onclick="cot()">cot</a>
+											</li>
+											<hr>
+											<li>
+												<a onclick="asin()">asin</a>
+											</li>
+											<li>
+												<a onclick="acos()">acos</a>
+											</li>
+											<li>
+												<a onclick="atan()">atan</a>
+											</li>
+											<li>
+												<a onclick="asec()">asec</a>
+											</li>
+											<li>
+												<a onclick="acsc()">acsc</a>
+											</li>
+											<li>
+												<a onclick="acot()">acot</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</footer>
+						<article>
+
+							<div class="calculator-area">
+								<div class="calculator-input">
+									<input class="cpe-input" id="display" type="text">
+								</div>
+								<div class="calculator-buttons">
+									<div class="buttons">
+										<button class="cpe-button is-unaccented is-secondary" onclick="square()">
+											n²
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="cube()">
+											n³
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="pi()">
+											π
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="e()">
+											e
+										</button>
+										<button class="cpe-button is-alert-color is-secondary" onclick="clearValue()">
+											AC
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="backspace()">
+											<span translate="no" class="cpe-icon cpe-icon-small material-icons">backspace</span>
+										</button>
+									</div>
+									<div class="buttons">
+										<button class="cpe-button is-unaccented is-secondary" onclick="abs()">
+											abs
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="squareRoot()">
+											sqrt
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="parenOpen()">
+											(
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="parenClose()">
+											)
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="factorial()">
+											n!
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="division()">
+											÷
+										</button>
+									</div>
+									<div class="buttons">
+										<button class="cpe-button is-unaccented is-secondary" onclick="exp()">
+											exp
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="base10Log()">
+											log
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit7()">
+											7
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit8()">
+											8
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit9()">
+											9
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="multiply()">
+											×
+										</button>
+									</div>
+									<div class="buttons">
+										<button class="cpe-button is-unaccented is-secondary" onclick="twoPower()">
+											2^n
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="tenPower()">
+											10^n
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit4()">
+											4
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit5()">
+											5
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit6()">
+											6
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="subtract()">
+											-
+										</button>
+									</div>
+									<div class="buttons">
+										<button class="cpe-button is-unaccented is-secondary" onclick="log2()">
+											log2
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="log10()">
+											log10
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit1()">
+											1
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit2()">
+											2
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit3()">
+											3
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="addition()">
+											+
+										</button>
+									</div>
+									<div class="buttons">
+										<button class="cpe-button is-unaccented is-secondary" onclick="modulo()">
+											%
+										</button>
+										<button class="cpe-button is-unaccented is-secondary" onclick="power()">
+											^
+										</button>
+										<button class="cpe-button is-secondary" onclick="digitComma()">
+											,
+										</button>
+										<button class="cpe-button is-secondary" onclick="digit0()">
+											0
+										</button>
+										<button class="cpe-button is-secondary" onclick="digitFS()">
+											.
+										</button>
+										<button class="cpe-button" onclick="calculate()">
+											=
+										</button>
+									</div>
+								</div>
+							</div>
+
+
+						</article>
+					</section>
+				</div>
+			</main>
+			<!--Calculator-->
+			<main class="convertor">
+				<div class="settings_page convertor_page">
+					<section>
+						<div class="lunalevit"></div>
+						<header class="upper">
+							<h2>Μετατροπέας</h2>
+						</header>
+						<article>
+							<!-- Length -->
+							<div class="cpe-settings-fieldset Convertor01">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">straighten</span>
+								Μήκος
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor01_01" value="0" onchange="Convertor01_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor01_02" tabindex="-1" onblur="Convertor01_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="meter">Meters</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="kilometer"><a>Kilometers</a></li>
+														<li value="meter"><a>Meters</a></li>
+														<li value="decimeter"><a>Decimeters</a></li>
+														<li value="centimeter"><a>Centimeters</a></li>
+														<li value="millimeter"><a>Millimeters</a></li>
+														<li value="micrometer"><a>Micrometers</a></li>
+														<li value="nanometer"><a>Nanometers</a></li>
+														<li value="inch"><a>Inches</a></li>
+														<li value="foot"><a>Feet</a></li>
+														<li value="yard"><a>Yards</a></li>
+														<li value="mile"><a>Miles</a></li>
+														<li value="link"><a>Links</a></li>
+														<li value="rod"><a>Rods</a></li>
+														<li value="chain"><a>Chains</a></li>
+														<li value="angstorm"><a>Angstorms</a></li>
+														<li value="mil"><a>Miles</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor01_03" value="0" onchange="Convertor01_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor01_04" tabindex="-1" onblur="Convertor01_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="inch">Inches</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="kilometer"><a>Kilometers</a></li>
+														<li value="meter"><a>Meters</a></li>
+														<li value="decimeter"><a>Decimeters</a></li>
+														<li value="centimeter"><a>Centimeters</a></li>
+														<li value="millimeter"><a>Millimeters</a></li>
+														<li value="micrometer"><a>Micrometers</a></li>
+														<li value="nanometer"><a>Nanometers</a></li>
+														<li value="inch"><a>Inches</a></li>
+														<li value="foot"><a>Feet</a></li>
+														<li value="yard"><a>Yards</a></li>
+														<li value="mile"><a>Miles</a></li>
+														<li value="link"><a>Links</a></li>
+														<li value="rod"><a>Rods</a></li>
+														<li value="chain"><a>Chains</a></li>
+														<li value="angstorm"><a>Angstorms</a></li>
+														<li value="mil"><a>Miles</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Surface Area -->
+							<div class="cpe-settings-fieldset Convertor02">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">grid_on</span>
+								Εμβαδόν
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor02_01" value="0" onchange="Convertor02_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor02_02" tabindex="-1" onblur="Convertor02_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="m2">Square Meters</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="km2"><a>Square Kilometers</a></li>
+														<li value="m2"><a>Square Meters</a></li>
+														<li value="dm2"><a>Square Decimeters</a></li>
+														<li value="cm2"><a>Square Centimeters</a></li>
+														<li value="mm2"><a>Square Millimeters</a></li>
+														<li value="um2"><a>Square Micrometers</a></li>
+														<li value="nm2"><a>Square Nanometers</a></li>
+														<li value="sqin"><a>Square Inches</a></li>
+														<li value="sqft"><a>Square Feet</a></li>
+														<li value="sqyd"><a>Square Yards</a></li>
+														<li value="sqmi"><a>Square Miles</a></li>
+														<li value="sqrd"><a>Square Rods</a></li>
+														<li value="sqch"><a>Square Chains</a></li>
+														<li value="sqmil"><a>Square Miles</a></li>
+														<li value="acre"><a>Acres</a></li>
+														<li value="hectare"><a>Hectares</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor02_03" value="0" onchange="Convertor02_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor02_04" tabindex="-1" onblur="Convertor02_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="sqin">Square Inches</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="km2"><a>Square Kilometers</a></li>
+														<li value="m2"><a>Square Meters</a></li>
+														<li value="dm2"><a>Square Decimeters</a></li>
+														<li value="cm2"><a>Square Centimeters</a></li>
+														<li value="mm2"><a>Square Millimeters</a></li>
+														<li value="um2"><a>Square Micrometers</a></li>
+														<li value="nm2"><a>Square Nanometers</a></li>
+														<li value="sqin"><a>Square Inches</a></li>
+														<li value="sqft"><a>Square Feet</a></li>
+														<li value="sqyd"><a>Square Yards</a></li>
+														<li value="sqmi"><a>Square Miles</a></li>
+														<li value="sqrd"><a>Square Rods</a></li>
+														<li value="sqch"><a>Square Chains</a></li>
+														<li value="sqmil"><a>Square Miles</a></li>
+														<li value="acre"><a>Acres</a></li>
+														<li value="hectare"><a>Hectares</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Volume -->
+							<div class="cpe-settings-fieldset Convertor03">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">deployed_code</span>
+								Όγκος
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor03_01" value="0" onchange="Convertor03_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor03_02" tabindex="-1" onblur="Convertor03_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="m3">Cubic Meters</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="km3"><a>Cubic Kilometers</a></li>
+														<li value="m3"><a>Cubic Meters</a></li>
+														<li value="litre"><a>Cubic Decimeters (Litres)</a></li>
+														<li value="millilitre"><a>Cubic Centimeters (Milillitres)</a></li>
+														<li value="mm3"><a>Cubic Millimeters</a></li>
+														<li value="um3"><a>Cubic Micrometers</a></li>
+														<li value="nm3"><a>Cubic Nanometers</a></li>
+														<li value="cuin"><a>Cubic Inches</a></li>
+														<li value="cuft"><a>Cubit Feet</a></li>
+														<li value="cuyd"><a>Cubic Yards</a></li>
+														<li value="teaspoon"><a>Teaspoons</a></li>
+														<li value="tablespoon"><a>Tablespoons</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor03_03" value="0" onchange="Convertor03_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor03_04" tabindex="-1" onblur="Convertor03_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="cuin">Cubic Inches</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="km3"><a>Cubic Kilometers</a></li>
+														<li value="m3"><a>Cubic Meters</a></li>
+														<li value="litre"><a>Cubic Decimeters (Litres)</a></li>
+														<li value="millilitre"><a>Cubic Centimeters (Milillitres)</a></li>
+														<li value="mm3"><a>Cubic Millimeters</a></li>
+														<li value="um3"><a>Cubic Micrometers</a></li>
+														<li value="nm3"><a>Cubic Nanometers</a></li>
+														<li value="cuin"><a>Cubic Inches</a></li>
+														<li value="cuft"><a>Cubic Feet</a></li>
+														<li value="cuyd"><a>Cubic Yards</a></li>
+														<li value="teaspoon"><a>Teaspoons</a></li>
+														<li value="tablespoon"><a>Tablespoons</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Angle -->
+							<div class="cpe-settings-fieldset Convertor04">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">keyboard_return</span>
+								Γωνία
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor04_01" value="0" onchange="Convertor04_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor04_02" tabindex="-1" onblur="Convertor04_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="rad">Radian</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="rad"><a>Radians</a></li>
+														<li value="deg"><a>Degrees</a></li>
+														<li value="grad"><a>Gradians</a></li>
+														<li value="cycle"><a>Cycles</a></li>
+														<li value="arcsec"><a>Arcsecs</a></li>
+														<li value="arcmin"><a>Arcmins</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor04_03" value="0" onchange="Convertor04_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor04_04" tabindex="-1" onblur="Convertor04_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="deg">Degress</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="rad"><a>Radians</a></li>
+														<li value="deg"><a>Degrees</a></li>
+														<li value="grad"><a>Gradians</a></li>
+														<li value="cycle"><a>Cycles</a></li>
+														<li value="arcsec"><a>Arcsecs</a></li>
+														<li value="arcmin"><a>Arcmins</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Time -->
+							<div class="cpe-settings-fieldset Convertor05">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">schedule</span>
+								Χρόνος
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor05_01" value="0" onchange="Convertor05_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor05_02" tabindex="-1" onblur="Convertor05_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="second">Seconds</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="microsecond"><a>Microseconds</a></li>
+														<li value="milliseconds"><a>Milliseconds</a></li>
+														<li value="second"><a>Seconds</a></li>
+														<li value="minute"><a>Minutes</a></li>
+														<li value="hour"><a>Hours</a></li>
+														<li value="day"><a>Days</a></li>
+														<li value="week"><a>Weeks</a></li>
+														<li value="month"><a>Months</a></li>
+														<li value="year"><a>Years</a></li>
+														<li value="decade"><a>Decades</a></li>
+														<li value="century"><a>Centuries</a></li>
+														<li value="millenium"><a>Milleniums</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor05_03" value="0" onchange="Convertor05_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor05_04" tabindex="-1" onblur="Convertor05_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="minute">Minutes</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="microsecond"><a>Microseconds</a></li>
+														<li value="milliseconds"><a>Milliseconds</a></li>
+														<li value="second"><a>Seconds</a></li>
+														<li value="minute"><a>Minutes</a></li>
+														<li value="hour"><a>Hours</a></li>
+														<li value="day"><a>Days</a></li>
+														<li value="week"><a>Weeks</a></li>
+														<li value="month"><a>Months</a></li>
+														<li value="year"><a>Years</a></li>
+														<li value="decade"><a>Decades</a></li>
+														<li value="century"><a>Centuries</a></li>
+														<li value="millennium"><a>Millenniums</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Frequency -->
+							<div class="cpe-settings-fieldset Convertor06">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">sync</span>
+								Συχνότητα
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor06_01" value="0" onchange="Convertor06_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor06_02" tabindex="-1" onblur="Convertor06_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="hertz">Hertz</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="hertz"><a>Hertz</a></li>
+														<li value="kilohertz"><a>Kilohertz</a></li>
+														<li value="megahertz"><a>Megahertz</a></li>
+														<li value="gigahertz"><a>Gigahertz</a></li>
+														<li value="terahertz"><a>Terahertz</a></li>
+														<li value="petahertz"><a>Petahertz</a></li>
+														<li value="exahertz"><a>Exahertz</a></li>
+														<li value="zettahertz"><a>Zettahertz</a></li>
+														<li value="yottahertz"><a>Yottahertz</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor06_03" value="0" onchange="Convertor06_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor06_04" tabindex="-1" onblur="Convertor06_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="megahertz">Megahertz</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="hertz"><a>Hertz</a></li>
+														<li value="kilohertz"><a>Kilohertz</a></li>
+														<li value="megahertz"><a>Megahertz</a></li>
+														<li value="gigahertz"><a>Gigahertz</a></li>
+														<li value="terahertz"><a>Terahertz</a></li>
+														<li value="petahertz"><a>Petahertz</a></li>
+														<li value="exahertz"><a>Exahertz</a></li>
+														<li value="zettahertz"><a>Zettahertz</a></li>
+														<li value="yottahertz"><a>Yottahertz</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Mass -->
+							<div class="cpe-settings-fieldset Convertor07">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">weight</span>
+								Μάζα
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor07_01" value="0" onchange="Convertor07_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor07_02" tabindex="-1" onblur="Convertor07_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="gram">Grams</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="gram"><a>Grams</a></li>
+														<li value="kilogram"><a>Kilogram</a></li>
+														<li value="ton"><a>Tons</a></li>
+														<li value="grain"><a>Grains</a></li>
+														<li value="dram"><a>Drams</a></li>
+														<li value="ounce"><a>Ounces</a></li>
+														<li value="poundmass"><a>Poundmasses (Libres)</a></li>
+														<li value="hundredweight"><a>Hundredweights</a></li>
+														<li value="stick"><a>Sticks</a></li>
+														<li value="stone"><a>Stones</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor07_03" value="0" onchange="Convertor07_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor07_04" tabindex="-1" onblur="Convertor07_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="grain">Grains</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="gram"><a>Grams</a></li>
+														<li value="kilogram"><a>Kilogram</a></li>
+														<li value="ton"><a>Tons</a></li>
+														<li value="grain"><a>Grains</a></li>
+														<li value="dram"><a>Drams</a></li>
+														<li value="ounce"><a>Ounces</a></li>
+														<li value="poundmass"><a>Poundmasses (Libres)</a></li>
+														<li value="hundredweight"><a>Hundredweights</a></li>
+														<li value="stick"><a>Sticks</a></li>
+														<li value="stone"><a>Stones</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Temperature -->
+							<div class="cpe-settings-fieldset Convertor08">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">thermometer</span>
+								Θερμοκρασία
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor08_01" value="0" onchange="Convertor08_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor08_02" tabindex="-1" onblur="Convertor08_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="kelvin">Kelvin</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="kelvin"><a>Kevlin</a></li>
+														<li value="celsius"><a>Celsius</a></li>
+														<li value="fahrenheit"><a>Fahrenheit</a></li>
+														<li value="rankine"><a>Rankine</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor08_03" value="-273.15" onchange="Convertor08_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor08_04" tabindex="-1" onblur="Convertor08_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="celsius">Celsius</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="kelvin"><a>Kevlin</a></li>
+														<li value="celsius"><a>Celsius</a></li>
+														<li value="fahrenheit"><a>Fahrenheit</a></li>
+														<li value="rankine"><a>Rankine</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Force -->
+							<div class="cpe-settings-fieldset Convertor09">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">wind_power</span>
+								Δύναμη
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor09_01" value="0" onchange="Convertor09_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor09_02" tabindex="-1" onblur="Convertor09_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="newton">Newton</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="newton"><a>Newton</a></li>
+														<li value="dyne"><a>Dyne</a></li>
+														<li value="poundforce"><a>Poundforces</a></li>
+														<li value="kip"><a>Kip</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor09_03" value="0" onchange="Convertor09_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select"  id="Convertor09_04" tabindex="-1" onblur="Convertor09_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="dyne">Dyne</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="newton"><a>Newton</a></li>
+														<li value="dyne"><a>Dyne</a></li>
+														<li value="poundforce"><a>Poundforces</a></li>
+														<li value="kip"><a>Kip</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Energy -->
+							<div class="cpe-settings-fieldset Convertor10">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">mode_heat</span>
+								Ενέργεια
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor10_01" value="0" onchange="Convertor10_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor10_02" tabindex="-1" onblur="Convertor10_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="joule">Joule</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="uJ"><a>Microjoule</a></li>
+														<li value="mJ"><a>Millijoule</a></li>
+														<li value="joule"><a>Joule</a></li>
+														<li value="kJ"><a>Kilojoule</a></li>
+														<li value="MJ"><a>Megajoule</a></li>
+														<li value="GJ"><a>Gigajoule</a></li>
+														<li value="TJ"><a>Terajoule</a></li>
+														<li value="PJ"><a>Petajoule</a></li>
+														<li value="EJ"><a>Exajoule</a></li>
+														<li value="EJ"><a>Zettajoule</a></li>
+														<li value="YJ"><a>Yottajoule</a></li>
+														<li value="erg"><a>Ergs</a></li>
+														<li value="uWh"><a>Microwatts-hour</a></li>
+														<li value="mWh"><a>Milliwatts-hour</a></li>
+														<li value="Wh"><a>Watts-hour</a></li>
+														<li value="kWh"><a>Kilowatts-hour</a></li>
+														<li value="MWh"><a>Megawatts-hour</a></li>
+														<li value="GWh"><a>Gigawatts-hour</a></li>
+														<li value="TWh"><a>Terwatts-hour</a></li>
+														<li value="PWh"><a>Petawatts-hour</a></li>
+														<li value="EWh"><a>Exawatts-hour</a></li>
+														<li value="EWh"><a>Zettawatts-hour</a></li>
+														<li value="YWh"><a>Yottawatts-hour</a></li>
+														<li value="BTU"><a>BTU</a></li>
+														<li value="electronvolt"><a>Electronvolt</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor10_03" value="0" onchange="Convertor10_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor10_04" tabindex="-1" onblur="Convertor10_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="Wh">Watt-hour</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="uJ"><a>Microjoule</a></li>
+														<li value="mJ"><a>Millijoule</a></li>
+														<li value="joule"><a>Joule</a></li>
+														<li value="kJ"><a>Kilojoule</a></li>
+														<li value="MJ"><a>Megajoule</a></li>
+														<li value="GJ"><a>Gigajoule</a></li>
+														<li value="TJ"><a>Terajoule</a></li>
+														<li value="PJ"><a>Petajoule</a></li>
+														<li value="EJ"><a>Exajoule</a></li>
+														<li value="EJ"><a>Zettajoule</a></li>
+														<li value="YJ"><a>Yottajoule</a></li>
+														<li value="erg"><a>Ergs</a></li>
+														<li value="uWh"><a>Microwatts-hour</a></li>
+														<li value="mWh"><a>Milliwatts-hour</a></li>
+														<li value="Wh"><a>Watts-hour</a></li>
+														<li value="kWh"><a>Kilowatts-hour</a></li>
+														<li value="MWh"><a>Megawatts-hour</a></li>
+														<li value="GWh"><a>Gigawatts-hour</a></li>
+														<li value="TWh"><a>Terwatts-hour</a></li>
+														<li value="PWh"><a>Petawatts-hour</a></li>
+														<li value="EWh"><a>Exawatts-hour</a></li>
+														<li value="EWh"><a>Zettawatts-hour</a></li>
+														<li value="YWh"><a>Yottawatts-hour</a></li>
+														<li value="BTU"><a>BTU</a></li>
+														<li value="electronvolt"><a>Electronvolt</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Power -->
+							<div class="cpe-settings-fieldset Convertor11">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">bolt</span>
+								Ισχύς
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor11_01" value="0" onchange="Convertor11_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor11_02" tabindex="-1" onblur="Convertor11_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="W">Watts</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="W"><a>Watts</a></li>
+														<li value="kW"><a>Kilowatts</a></li>
+														<li value="MW"><a>Megawatts</a></li>
+														<li value="GW"><a>Gigawatts</a></li>
+														<li value="TW"><a>Terwatts</a></li>
+														<li value="PW"><a>Petawatts</a></li>
+														<li value="EW"><a>Exawatts</a></li>
+														<li value="EW"><a>Zettawatts</a></li>
+														<li value="YW"><a>Yottawatts</a></li>
+														<li value="hp"><a>Hps</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor11_03" value="0" onchange="Convertor11_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor11_04" tabindex="-1" onblur="Convertor11_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="hp">Hps</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="W"><a>Watts</a></li>
+														<li value="kW"><a>Kilowatts</a></li>
+														<li value="MW"><a>Megawatts</a></li>
+														<li value="GW"><a>Gigawatts</a></li>
+														<li value="TW"><a>Terwatts</a></li>
+														<li value="PW"><a>Petawatts</a></li>
+														<li value="EW"><a>Exawatts</a></li>
+														<li value="EW"><a>Zettawatts</a></li>
+														<li value="YW"><a>Yottawatts</a></li>
+														<li value="hp"><a>Hps</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Pressure -->
+							<div class="cpe-settings-fieldset Convertor12">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">speed</span>
+								Πίεση
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor12_01" value="0" onchange="Convertor12_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor12_02" tabindex="-1" onblur="Convertor12_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="Pa">Pascal</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="uPa"><a>Micropascal</a></li>
+														<li value="mPa"><a>Millipascal</a></li>
+														<li value="Pa"><a>Pascal</a></li>
+														<li value="kPa"><a>Kilopascal</a></li>
+														<li value="MPa"><a>Megapascal</a></li>
+														<li value="GPa"><a>Gigapascal</a></li>
+														<li value="TPa"><a>Terapascal</a></li>
+														<li value="PPa"><a>Petapascal</a></li>
+														<li value="EPa"><a>Exapascal</a></li>
+														<li value="EPa"><a>Zettapascal</a></li>
+														<li value="YPa"><a>Yottapascal</a></li>
+														<li value="psi"><a>PSI</a></li>
+														<li value="atm"><a>Atmospheres</a></li>
+														<li value="torr"><a>Torr</a></li>
+														<li value="mmHg"><a>Millimetres of mercury</a></li>
+														<li value="mmH2O"><a>Millimetres of water</a></li>
+														<li value="cmH2O"><a>Centimetres of water</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor12_03" value="0" onchange="Convertor12_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor12_04" tabindex="-1" onblur="Convertor12_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="psi">PSI</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="uPa"><a>Micropascal</a></li>
+														<li value="mPa"><a>Millipascal</a></li>
+														<li value="Pa"><a>Pascal</a></li>
+														<li value="kPa"><a>Kilopascal</a></li>
+														<li value="MPa"><a>Megapascal</a></li>
+														<li value="GPa"><a>Gigapascal</a></li>
+														<li value="TPa"><a>Terapascal</a></li>
+														<li value="PPa"><a>Petapascal</a></li>
+														<li value="EPa"><a>Exapascal</a></li>
+														<li value="EPa"><a>Zettapascal</a></li>
+														<li value="YPa"><a>Yottapascal</a></li>
+														<li value="psi"><a>PSI</a></li>
+														<li value="atm"><a>Atmospheres</a></li>
+														<li value="torr"><a>Torr</a></li>
+														<li value="mmHg"><a>Millimetres of mercury</a></li>
+														<li value="mmH2O"><a>Millimetres of water</a></li>
+														<li value="cmH2O"><a>Centimetres of water</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+							<!-- Data -->
+							<div class="cpe-settings-fieldset Convertor13">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">hard_disk</span>
+								Δεδομένα
+								</h2></summary>
+								<table>
+									<tr>
+										<td>
+											<label>Από:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor13_01" value="0" onchange="Convertor13_Result()">
+										</td>
+
+										<td>
+											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor13_02" tabindex="-1" onblur="Convertor13_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="b">Bit</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="b"><a>Bit</a></li>
+														<li value="kb"><a>Kilobit</a></li>
+														<li value="Mb"><a>Megabit</a></li>
+														<li value="Gb"><a>Gigabit</a></li>
+														<li value="Tb"><a>Terabit</a></li>
+														<li value="Pb"><a>Petabit</a></li>
+														<li value="Eb"><a>Exabit</a></li>
+														<li value="Eb"><a>Zettabit</a></li>
+														<li value="Yb"><a>Yottabit</a></li>
+														<li value="Kib"><a>Kibibit</a></li>
+														<li value="Mib"><a>Mebibit</a></li>
+														<li value="Gib"><a>Gibibit</a></li>
+														<li value="Tib"><a>Tebibit</a></li>
+														<li value="Pib"><a>Pebibit</a></li>
+														<li value="Eib"><a>Exbibit</a></li>
+														<li value="Eib"><a>Zebibit</a></li>
+														<li value="Yib"><a>Yobibit</a></li>
+														<li value="B"><a>Byte</a></li>
+														<li value="kB"><a>Kilobyte</a></li>
+														<li value="MB"><a>Megabyte</a></li>
+														<li value="GB"><a>Gigabyte</a></li>
+														<li value="TB"><a>Terabyte</a></li>
+														<li value="PB"><a>Petabyte</a></li>
+														<li value="EB"><a>Exabyte</a></li>
+														<li value="EB"><a>Zettabyte</a></li>
+														<li value="YB"><a>Yottabyte</a></li>
+														<li value="KiB"><a>Kibibyte</a></li>
+														<li value="MiB"><a>Mebibyte</a></li>
+														<li value="GiB"><a>Gibibyte</a></li>
+														<li value="TiB"><a>Tebibyte</a></li>
+														<li value="PiB"><a>Pebibyte</a></li>
+														<li value="EiB"><a>Exbibyte</a></li>
+														<li value="EiB"><a>Zebibyte</a></li>
+														<li value="YiB"><a>Yobibyte</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label>Σε:</label> 
+										</td>
+										<td>
+											<input type="text" class="cpe-input" id="Convertor13_03" value="0" onchange="Convertor13_Result(true)">
+										</td>
+										<td>
+											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor13_04" tabindex="-1" onblur="Convertor13_Result()">
+												<div class="cpe-input convertor cpe-dropdown__toggle">
+													<span class="cpe-select__value" value="B">Byte</span>
+													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
+												</div>
+												<div class="cpe-dropdown__content is-right-aligned">
+													<ul class="cpe-list is-linked">
+														<li value="b"><a>Bit</a></li>
+														<li value="kb"><a>Kilobit</a></li>
+														<li value="Mb"><a>Megabit</a></li>
+														<li value="Gb"><a>Gigabit</a></li>
+														<li value="Tb"><a>Terabit</a></li>
+														<li value="Pb"><a>Petabit</a></li>
+														<li value="Eb"><a>Exabit</a></li>
+														<li value="Eb"><a>Zettabit</a></li>
+														<li value="Yb"><a>Yottabit</a></li>
+														<li value="Kib"><a>Kibibit</a></li>
+														<li value="Mib"><a>Mebibit</a></li>
+														<li value="Gib"><a>Gibibit</a></li>
+														<li value="Tib"><a>Tebibit</a></li>
+														<li value="Pib"><a>Pebibit</a></li>
+														<li value="Eib"><a>Exbibit</a></li>
+														<li value="Eib"><a>Zebibit</a></li>
+														<li value="Yib"><a>Yobibit</a></li>
+														<li value="B"><a>Byte</a></li>
+														<li value="kB"><a>Kilobyte</a></li>
+														<li value="MB"><a>Megabyte</a></li>
+														<li value="GB"><a>Gigabyte</a></li>
+														<li value="TB"><a>Terabyte</a></li>
+														<li value="PB"><a>Petabyte</a></li>
+														<li value="EB"><a>Exabyte</a></li>
+														<li value="EB"><a>Zettabyte</a></li>
+														<li value="YB"><a>Yottabyte</a></li>
+														<li value="KiB"><a>Kibibyte</a></li>
+														<li value="MiB"><a>Mebibyte</a></li>
+														<li value="GiB"><a>Gibibyte</a></li>
+														<li value="TiB"><a>Tebibyte</a></li>
+														<li value="PiB"><a>Pebibyte</a></li>
+														<li value="EiB"><a>Exbibyte</a></li>
+														<li value="EiB"><a>Zebibyte</a></li>
+														<li value="YiB"><a>Yobibyte</a></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								</details>
+							</div>
+
+						</article>
+					</section>
+				</div>
+			</main>
+			<!--Settings-->
+			<main class="settings">
+				<div class="settings_page">
+					<section>
+						<div class="lunalevit"></div>
+						<header class="upper">
+							<h2>Ρυθμίσεις</h2>
+						</header>
+						<article>
+							<div class="cpe-settings-fieldset AppTheme">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">palette</span>
+								Θέμα Εφαρμογής
+								</h2></summary>
+								<input type="radio" name="AppTheme" id="AppTheme01" onclick="ColorScheme('auto')"><label for="AppTheme01">Αυτόματο</label>
+								<br>
+								<input type="radio" name="AppTheme" id="AppTheme02" onclick="ColorScheme('auto-dark')"><label for="AppTheme02">Αυτόματο (Σκουρόχρωμο)</label>
+								<br>
+								<input type="radio" name="AppTheme" id="AppTheme03" onclick="ColorScheme('light')"><label for="AppTheme03">Ανοιχτόχρωμο</label>
+								<br>
+								<input type="radio" name="AppTheme" id="AppTheme04" onclick="ColorScheme('dark')"><label for="AppTheme04">Σκουρόχρωμο</label>
+								</details>
+								<div style="margin:5px 0;"><small>Αυτή η ρύθμιση ορίζει το θέμα συσκευής της Αριθμομηχανής</small></div>
+							</div>
+
+						</article>
+
+					</section>
+				</div>
+			</main>
+		</div>
+
+	</container>
+
+	</body>
+</html>
+<head>
+<title>Αριθμομηχανή</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="CPE.css"> <!-- Main CSS -->
+<link rel="stylesheet" type="text/css" href="Mpisto.css"> <!-- Main CSS -->
+<link rel="stylesheet" type="text/css" href="VisualStyles.css"> <!-- Main CSS -->
+<link rel="stylesheet" type="text/css" href="VisualStyles_Extra.css"> <!-- Main CSS -->
+</head>
+
+
+<script src="jQuery.js"></script>
+<script src="UserAgents.js"></script>
+<script src="Chroma.js"></script>
+<script src="Math.js"></script>
+<script src="Mpisto.js"></script>
+<script src="Themes.js"></script>
+<script src="Debug.js"></script>
+
+<script>
+// Pollyfils for Options.html
+
+// Filters
+function HCa1() {
+    var x = document.getElementById("Handler");
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
+}
+
+function HCb1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterA") == -1) {
+        x.className += " filterA";
+    }
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
+}
+
+function HCc1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterB") == -1) {
+        x.className += " filterB";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
+}
+
+function HCd1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterC") == -1) {
+        x.className += " filterC";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
+}
+
+function HCe1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterD") == -1) {
+        x.className += " filterD";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
+}
+
+function HCf1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterE") == -1) {
+        x.className += " filterE";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterF", "");
+}
+
+function HCg1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterF") == -1) {
+        x.className += " filterF";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+}
+
+
+// Restore High Contrast
+
+// High Contast Themes
+function BarSwitch() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("bar-hidden") == -1) {
+        x.className += " bar-hidden";
+    } else {
+        x.className = x.className.replace(" bar-hidden", "");
+    }
+}
+
+
+
+
+
+
+
+
+/* Mobile Only CSS */
+if (navigator.userAgent.match("Mobile")) {
+document.getElementById("Handler").className += " phone"
+}
+
+
+/* Dropdown
+function dropFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+*/
+</script>
+
+
+<!--
+    <div class="cpe-dropdown">
+      <a class="link">Wikis</a>
+      <div class="cpe-dropdown-content">
+        <ul class="cpe-list cpe-is-linked">
+        </ul>
+      </div>
+    </div>
+-->
+
+
+<!-- Past Notifications
+
+           <li class="notification reply">
+           <a>
+           <div class="wrapper">
+           <img class="mpisto-avatar" src="Zekzphire.png"></img><div><h3>Improve your viewing experience with High Contrast</h3> <br><h6>By Zekzphire<time>26 Feb 2018</time></h6></div>
+           </div>
+           </a>
+           </li>
+           
+           <li class="notification">
+           <a>
+           <div class="wrapper">
+           <img class="mpisto-avatar" src="HM100.png"></img><div><h3>Working with wikis</h3> <br><h6>By HM100<time>24 Feb 2018</time></h6></div>
+           </div>
+           </a>
+           </li>
+
+-->
