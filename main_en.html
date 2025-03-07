@@ -158,7 +158,8 @@
 
 							<div class="calculator-area">
 								<div class="calculator-input">
-									<input class="cpe-input" id="display" type="text">
+									<input class="cpe-input" id="display" type="text" oninput="calculateResult()">
+									<input class="cpe-input is-unaccented" id="result" type="text" readonly>
 								</div>
 								<div class="calculator-buttons">
 									<div class="buttons">
@@ -311,7 +312,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor01_01" value="0" onchange="Convertor01_Result()">
+											<input type="text" class="cpe-input" id="Convertor01_01" value="0" oninput="Convertor01_Result()">
 										</td>
 
 										<td>
@@ -323,7 +324,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="kilometer"><a>Kilometers</a></li>
-														<li value="meter"><a>Meters</a></li>
+														<li value="meter" class="selected"><a>Meters</a></li>
 														<li value="decimeter"><a>Decimeters</a></li>
 														<li value="centimeter"><a>Centimeters</a></li>
 														<li value="millimeter"><a>Millimeters</a></li>
@@ -348,7 +349,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor01_03" value="0" onchange="Convertor01_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor01_03" value="0" oninput="Convertor01_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor01_04" tabindex="-1" onblur="Convertor01_Result()">
@@ -365,7 +366,7 @@
 														<li value="millimeter"><a>Millimeters</a></li>
 														<li value="micrometer"><a>Micrometers</a></li>
 														<li value="nanometer"><a>Nanometers</a></li>
-														<li value="inch"><a>Inches</a></li>
+														<li value="inch" class="selected"><a>Inches</a></li>
 														<li value="foot"><a>Feet</a></li>
 														<li value="yard"><a>Yards</a></li>
 														<li value="mile"><a>Miles</a></li>
@@ -395,7 +396,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor02_01" value="0" onchange="Convertor02_Result()">
+											<input type="text" class="cpe-input" id="Convertor02_01" value="0" oninput="Convertor02_Result()">
 										</td>
 
 										<td>
@@ -407,7 +408,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="km2"><a>Square Kilometers</a></li>
-														<li value="m2"><a>Square Meters</a></li>
+														<li value="m2" class="selected"><a>Square Meters</a></li>
 														<li value="dm2"><a>Square Decimeters</a></li>
 														<li value="cm2"><a>Square Centimeters</a></li>
 														<li value="mm2"><a>Square Millimeters</a></li>
@@ -432,7 +433,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor02_03" value="0" onchange="Convertor02_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor02_03" value="0" oninput="Convertor02_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor02_04" tabindex="-1" onblur="Convertor02_Result()">
@@ -449,7 +450,7 @@
 														<li value="mm2"><a>Square Millimeters</a></li>
 														<li value="um2"><a>Square Micrometers</a></li>
 														<li value="nm2"><a>Square Nanometers</a></li>
-														<li value="sqin"><a>Square Inches</a></li>
+														<li value="sqin" class="selected"><a>Square Inches</a></li>
 														<li value="sqft"><a>Square Feet</a></li>
 														<li value="sqyd"><a>Square Yards</a></li>
 														<li value="sqmi"><a>Square Miles</a></li>
@@ -479,7 +480,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor03_01" value="0" onchange="Convertor03_Result()">
+											<input type="text" class="cpe-input" id="Convertor03_01" value="0" oninput="Convertor03_Result()">
 										</td>
 
 										<td>
@@ -491,7 +492,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="km3"><a>Cubic Kilometers</a></li>
-														<li value="m3"><a>Cubic Meters</a></li>
+														<li value="m3" class="selected"><a>Cubic Meters</a></li>
 														<li value="litre"><a>Cubic Decimeters (Litres)</a></li>
 														<li value="millilitre"><a>Cubic Centimeters (Milillitres)</a></li>
 														<li value="mm3"><a>Cubic Millimeters</a></li>
@@ -512,7 +513,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor03_03" value="0" onchange="Convertor03_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor03_03" value="0" oninput="Convertor03_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor03_04" tabindex="-1" onblur="Convertor03_Result()">
@@ -529,7 +530,7 @@
 														<li value="mm3"><a>Cubic Millimeters</a></li>
 														<li value="um3"><a>Cubic Micrometers</a></li>
 														<li value="nm3"><a>Cubic Nanometers</a></li>
-														<li value="cuin"><a>Cubic Inches</a></li>
+														<li value="cuin" class="selected"><a>Cubic Inches</a></li>
 														<li value="cuft"><a>Cubic Feet</a></li>
 														<li value="cuyd"><a>Cubic Yards</a></li>
 														<li value="teaspoon"><a>Teaspoons</a></li>
@@ -555,18 +556,18 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor04_01" value="0" onchange="Convertor04_Result()">
+											<input type="text" class="cpe-input" id="Convertor04_01" value="0" oninput="Convertor04_Result()">
 										</td>
 
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor04_02" tabindex="-1" onblur="Convertor04_Result()">
 												<div class="cpe-input convertor cpe-dropdown__toggle">
-													<span class="cpe-select__value" value="rad">Radian</span>
+													<span class="cpe-select__value" value="rad">Radians</span>
 													<span class="cpe-icon cpe-icon-tiny cpe-icon-large cpe-dropdown__toggle-chevron material-icons">arrow_drop_down</span>
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="rad"><a>Radians</a></li>
+														<li value="rad" class="selected"><a>Radians</a></li>
 														<li value="deg"><a>Degrees</a></li>
 														<li value="grad"><a>Gradians</a></li>
 														<li value="cycle"><a>Cycles</a></li>
@@ -582,7 +583,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor04_03" value="0" onchange="Convertor04_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor04_03" value="0" oninput="Convertor04_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor04_04" tabindex="-1" onblur="Convertor04_Result()">
@@ -593,7 +594,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="rad"><a>Radians</a></li>
-														<li value="deg"><a>Degrees</a></li>
+														<li value="deg" class="selected"><a>Degrees</a></li>
 														<li value="grad"><a>Gradians</a></li>
 														<li value="cycle"><a>Cycles</a></li>
 														<li value="arcsec"><a>Arcsecs</a></li>
@@ -619,7 +620,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor05_01" value="0" onchange="Convertor05_Result()">
+											<input type="text" class="cpe-input" id="Convertor05_01" value="0" oninput="Convertor05_Result()">
 										</td>
 
 										<td>
@@ -632,7 +633,7 @@
 													<ul class="cpe-list is-linked">
 														<li value="microsecond"><a>Microseconds</a></li>
 														<li value="milliseconds"><a>Milliseconds</a></li>
-														<li value="second"><a>Seconds</a></li>
+														<li value="second" class="selected"><a>Seconds</a></li>
 														<li value="minute"><a>Minutes</a></li>
 														<li value="hour"><a>Hours</a></li>
 														<li value="day"><a>Days</a></li>
@@ -652,7 +653,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor05_03" value="0" onchange="Convertor05_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor05_03" value="0" oninput="Convertor05_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor05_04" tabindex="-1" onblur="Convertor05_Result()">
@@ -665,7 +666,7 @@
 														<li value="microsecond"><a>Microseconds</a></li>
 														<li value="milliseconds"><a>Milliseconds</a></li>
 														<li value="second"><a>Seconds</a></li>
-														<li value="minute"><a>Minutes</a></li>
+														<li value="minute" class="selected"><a>Minutes</a></li>
 														<li value="hour"><a>Hours</a></li>
 														<li value="day"><a>Days</a></li>
 														<li value="week"><a>Weeks</a></li>
@@ -695,7 +696,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor06_01" value="0" onchange="Convertor06_Result()">
+											<input type="text" class="cpe-input" id="Convertor06_01" value="0" oninput="Convertor06_Result()">
 										</td>
 
 										<td>
@@ -706,7 +707,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="hertz"><a>Hertz</a></li>
+														<li value="hertz" class="selected"><a>Hertz</a></li>
 														<li value="kilohertz"><a>Kilohertz</a></li>
 														<li value="megahertz"><a>Megahertz</a></li>
 														<li value="gigahertz"><a>Gigahertz</a></li>
@@ -725,7 +726,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor06_03" value="0" onchange="Convertor06_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor06_03" value="0" oninput="Convertor06_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor06_04" tabindex="-1" onblur="Convertor06_Result()">
@@ -737,7 +738,7 @@
 													<ul class="cpe-list is-linked">
 														<li value="hertz"><a>Hertz</a></li>
 														<li value="kilohertz"><a>Kilohertz</a></li>
-														<li value="megahertz"><a>Megahertz</a></li>
+														<li value="megahertz" class="selected"><a>Megahertz</a></li>
 														<li value="gigahertz"><a>Gigahertz</a></li>
 														<li value="terahertz"><a>Terahertz</a></li>
 														<li value="petahertz"><a>Petahertz</a></li>
@@ -765,7 +766,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor07_01" value="0" onchange="Convertor07_Result()">
+											<input type="text" class="cpe-input" id="Convertor07_01" value="0" oninput="Convertor07_Result()">
 										</td>
 
 										<td>
@@ -776,7 +777,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="gram"><a>Grams</a></li>
+														<li value="gram" class="selected"><a>Grams</a></li>
 														<li value="kilogram"><a>Kilogram</a></li>
 														<li value="ton"><a>Tons</a></li>
 														<li value="grain"><a>Grains</a></li>
@@ -796,7 +797,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor07_03" value="0" onchange="Convertor07_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor07_03" value="0" oninput="Convertor07_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor07_04" tabindex="-1" onblur="Convertor07_Result()">
@@ -809,7 +810,7 @@
 														<li value="gram"><a>Grams</a></li>
 														<li value="kilogram"><a>Kilogram</a></li>
 														<li value="ton"><a>Tons</a></li>
-														<li value="grain"><a>Grains</a></li>
+														<li value="grain" class="selected"><a>Grains</a></li>
 														<li value="dram"><a>Drams</a></li>
 														<li value="ounce"><a>Ounces</a></li>
 														<li value="poundmass"><a>Poundmasses (Libres)</a></li>
@@ -837,7 +838,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor08_01" value="0" onchange="Convertor08_Result()">
+											<input type="text" class="cpe-input" id="Convertor08_01" value="0" oninput="Convertor08_Result()">
 										</td>
 
 										<td>
@@ -848,7 +849,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="kelvin"><a>Kevlin</a></li>
+														<li value="kelvin" class="selected"><a>Kevlin</a></li>
 														<li value="celsius"><a>Celsius</a></li>
 														<li value="fahrenheit"><a>Fahrenheit</a></li>
 														<li value="rankine"><a>Rankine</a></li>
@@ -862,7 +863,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor08_03" value="-273.15" onchange="Convertor08_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor08_03" value="-273.15" oninput="Convertor08_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor08_04" tabindex="-1" onblur="Convertor08_Result()">
@@ -873,7 +874,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="kelvin"><a>Kevlin</a></li>
-														<li value="celsius"><a>Celsius</a></li>
+														<li value="celsius" class="selected"><a>Celsius</a></li>
 														<li value="fahrenheit"><a>Fahrenheit</a></li>
 														<li value="rankine"><a>Rankine</a></li>
 													</ul>
@@ -897,7 +898,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor09_01" value="0" onchange="Convertor09_Result()">
+											<input type="text" class="cpe-input" id="Convertor09_01" value="0" oninput="Convertor09_Result()">
 										</td>
 
 										<td>
@@ -908,7 +909,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="newton"><a>Newton</a></li>
+														<li value="newton" class="selected"><a>Newton</a></li>
 														<li value="dyne"><a>Dyne</a></li>
 														<li value="poundforce"><a>Poundforces</a></li>
 														<li value="kip"><a>Kip</a></li>
@@ -922,7 +923,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor09_03" value="0" onchange="Convertor09_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor09_03" value="0" oninput="Convertor09_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor09_04" tabindex="-1" onblur="Convertor09_Result()">
@@ -933,7 +934,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="newton"><a>Newton</a></li>
-														<li value="dyne"><a>Dyne</a></li>
+														<li value="dyne" class="selected"><a>Dyne</a></li>
 														<li value="poundforce"><a>Poundforces</a></li>
 														<li value="kip"><a>Kip</a></li>
 													</ul>
@@ -957,7 +958,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor10_01" value="0" onchange="Convertor10_Result()">
+											<input type="text" class="cpe-input" id="Convertor10_01" value="0" oninput="Convertor10_Result()">
 										</td>
 
 										<td>
@@ -970,7 +971,7 @@
 													<ul class="cpe-list is-linked">
 														<li value="uJ"><a>Microjoule</a></li>
 														<li value="mJ"><a>Millijoule</a></li>
-														<li value="joule"><a>Joule</a></li>
+														<li value="joule" class="selected"><a>Joule</a></li>
 														<li value="kJ"><a>Kilojoule</a></li>
 														<li value="MJ"><a>Megajoule</a></li>
 														<li value="GJ"><a>Gigajoule</a></li>
@@ -1003,7 +1004,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor10_03" value="0" onchange="Convertor10_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor10_03" value="0" oninput="Convertor10_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor10_04" tabindex="-1" onblur="Convertor10_Result()">
@@ -1027,7 +1028,7 @@
 														<li value="erg"><a>Ergs</a></li>
 														<li value="uWh"><a>Microwatts-hour</a></li>
 														<li value="mWh"><a>Milliwatts-hour</a></li>
-														<li value="Wh"><a>Watts-hour</a></li>
+														<li value="Wh" class="selected"><a>Watts-hour</a></li>
 														<li value="kWh"><a>Kilowatts-hour</a></li>
 														<li value="MWh"><a>Megawatts-hour</a></li>
 														<li value="GWh"><a>Gigawatts-hour</a></li>
@@ -1059,7 +1060,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor11_01" value="0" onchange="Convertor11_Result()">
+											<input type="text" class="cpe-input" id="Convertor11_01" value="0" oninput="Convertor11_Result()">
 										</td>
 
 										<td>
@@ -1070,7 +1071,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="W"><a>Watts</a></li>
+														<li value="W" class="selected"><a>Watts</a></li>
 														<li value="kW"><a>Kilowatts</a></li>
 														<li value="MW"><a>Megawatts</a></li>
 														<li value="GW"><a>Gigawatts</a></li>
@@ -1090,7 +1091,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor11_03" value="0" onchange="Convertor11_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor11_03" value="0" oninput="Convertor11_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor11_04" tabindex="-1" onblur="Convertor11_Result()">
@@ -1109,7 +1110,7 @@
 														<li value="EW"><a>Exawatts</a></li>
 														<li value="EW"><a>Zettawatts</a></li>
 														<li value="YW"><a>Yottawatts</a></li>
-														<li value="hp"><a>Hps</a></li>
+														<li value="hp" class="selected"><a>Hps</a></li>
 													</ul>
 												</div>
 											</div>
@@ -1131,7 +1132,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor12_01" value="0" onchange="Convertor12_Result()">
+											<input type="text" class="cpe-input" id="Convertor12_01" value="0" oninput="Convertor12_Result()">
 										</td>
 
 										<td>
@@ -1144,7 +1145,7 @@
 													<ul class="cpe-list is-linked">
 														<li value="uPa"><a>Micropascal</a></li>
 														<li value="mPa"><a>Millipascal</a></li>
-														<li value="Pa"><a>Pascal</a></li>
+														<li value="Pa" class="selected"><a>Pascal</a></li>
 														<li value="kPa"><a>Kilopascal</a></li>
 														<li value="MPa"><a>Megapascal</a></li>
 														<li value="GPa"><a>Gigapascal</a></li>
@@ -1169,7 +1170,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor12_03" value="0" onchange="Convertor12_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor12_03" value="0" oninput="Convertor12_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor12_04" tabindex="-1" onblur="Convertor12_Result()">
@@ -1190,7 +1191,7 @@
 														<li value="EPa"><a>Exapascal</a></li>
 														<li value="EPa"><a>Zettapascal</a></li>
 														<li value="YPa"><a>Yottapascal</a></li>
-														<li value="psi"><a>PSI</a></li>
+														<li value="psi" class="selected"><a>PSI</a></li>
 														<li value="atm"><a>Atmospheres</a></li>
 														<li value="torr"><a>Torr</a></li>
 														<li value="mmHg"><a>Millimetres of mercury</a></li>
@@ -1217,7 +1218,7 @@
 											<label>From:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor13_01" value="0" onchange="Convertor13_Result()">
+											<input type="text" class="cpe-input" id="Convertor13_01" value="0" oninput="Convertor13_Result()">
 										</td>
 
 										<td>
@@ -1228,7 +1229,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="b"><a>Bit</a></li>
+														<li value="b" class="selected"><a>Bit</a></li>
 														<li value="kb"><a>Kilobit</a></li>
 														<li value="Mb"><a>Megabit</a></li>
 														<li value="Gb"><a>Gigabit</a></li>
@@ -1272,7 +1273,7 @@
 											<label>To:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor13_03" value="0" onchange="Convertor13_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor13_03" value="0" oninput="Convertor13_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor13_04" tabindex="-1" onblur="Convertor13_Result()">
@@ -1299,7 +1300,7 @@
 														<li value="Eib"><a>Exbibit</a></li>
 														<li value="Eib"><a>Zebibit</a></li>
 														<li value="Yib"><a>Yobibit</a></li>
-														<li value="B"><a>Byte</a></li>
+														<li value="B" class="selected"><a>Byte</a></li>
 														<li value="kB"><a>Kilobyte</a></li>
 														<li value="MB"><a>Megabyte</a></li>
 														<li value="GB"><a>Gigabyte</a></li>
@@ -1354,6 +1355,18 @@
 								</details>
 								<div style="margin:5px 0;"><small>This setting sets Calculator's device theme</small></div>
 							</div>
+
+							<div class="cpe-settings-fieldset Windowing">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">select_window</span>
+								Windowing
+								</h2></summary>
+								<input type="checkbox" name="Windowing" id="Windowing01" title="Task Manager will be over the other windows"><label for="Windowing01" title="Calcilator will be over the other windows">Always on top</label>
+								<br>
+								</details>
+							</div>
+
 
 						</article>
 

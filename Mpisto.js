@@ -54,31 +54,37 @@ function Tab2() {
 function square() {
     let display = document.getElementById("display");
     display.value += "^2";
+    calculateResult();
 }
 
 function cube() {
     let display = document.getElementById("display");
     display.value += "^3";
+    calculateResult();
 }
  
 function pi() {
     let display = document.getElementById("display");
     display.value += "pi";
+    calculateResult();
 }
  
 function e() {
     let display = document.getElementById("display");
     display.value += "e";
+    calculateResult();
 }
 
 function backspace() {
     let display = document.getElementById("display");
     display.value = display.value.slice(0, -1);
+    calculateResult();
 }
  
 function clearValue() {
     let display = document.getElementById("display");
     display.value = "";
+    calculateResult();
 }
  
  
@@ -86,150 +92,184 @@ function clearValue() {
 function abs() {
     let display = document.getElementById("display");
     display.value += "abs(";
+    calculateResult();
 }
 
 function squareRoot() {
     let display = document.getElementById("display");
     display.value += "sqrt(";
+    calculateResult();
 }
 
 function parenOpen() {
     let display = document.getElementById("display");
     display.value += "(";
+    calculateResult();
 }
+
 function parenClose() {
     let display = document.getElementById("display");
     display.value += ")";
+    calculateResult();
 }
 
 function factorial() {
     let display = document.getElementById("display");
     display.value += "!";
+    calculateResult();
 }
 
 function division() {
     let display = document.getElementById("display");
     display.value += "/";
+    calculateResult();
 }
 
 /* Group 3 */
  function exp() {
     let display = document.getElementById("display");
     display.value += "exp(";
+    calculateResult();
 }
 
 function base10Log() {
     let display = document.getElementById("display");
     display.value += " log(";
+    calculateResult();
 }
 
 function digit7() {
     let display = document.getElementById("display");
     display.value += "7";
+    calculateResult();
 }
+
 function digit8() {
     let display = document.getElementById("display");
     display.value += "8";
+    calculateResult();
 }
 
 function digit9() {
     let display = document.getElementById("display");
     display.value += "9";
+    calculateResult();
 }
 
 function multiply() {
     let display = document.getElementById("display");
     display.value += "*";
+    calculateResult();
 }
 
 /* Group 4 */
  function twoPower() {
     let display = document.getElementById("display");
     display.value += "2^";
+    calculateResult();
 }
 
 function tenPower() {
     let display = document.getElementById("display");
     display.value += "10^";
+    calculateResult();
 }
 
 function digit4() {
     let display = document.getElementById("display");
     display.value += "4";
+    calculateResult();
 }
+
 function digit5() {
     let display = document.getElementById("display");
     display.value += "5";
+    calculateResult();
 }
 
 function digit6() {
     let display = document.getElementById("display");
     display.value += "6";
+    calculateResult();
 }
 
 function subtract() {
     let display = document.getElementById("display");
     display.value += "-";
+    calculateResult();
 }
 
 /* Group 5 */
  function log2() {
     let display = document.getElementById("display");
     display.value += "log2(";
+    calculateResult();
 }
 
 function log10() {
     let display = document.getElementById("display");
     display.value += "log10(";
+    calculateResult();
 }
 
 function digit1() {
     let display = document.getElementById("display");
     display.value += "1";
+    calculateResult();
 }
+
 function digit2() {
     let display = document.getElementById("display");
     display.value += "2";
+    calculateResult();
 }
 
 function digit3() {
     let display = document.getElementById("display");
     display.value += "3";
+    calculateResult();
 }
 
 function addition() {
     let display = document.getElementById("display");
     display.value += "+";
+    calculateResult();
 }
 
 /* Group 5 */ 
 function modulo() {
     let display = document.getElementById("display");
     display.value += "%";
+    calculateResult();
 }
 
 function power() {
     let display = document.getElementById("display");
     display.value += "^";
+    calculateResult();
 }
 
 function digitComma() {
     let display = document.getElementById("display");
     display.value += ",";
+    calculateResult();
 }
 
 function digit0() {
     let display = document.getElementById("display");
     display.value += "0";
+    calculateResult();
 }
 
 function digitFS() {
     let display = document.getElementById("display");
     display.value += ".";
+    calculateResult();
 }
 
 function calculate() {
     let display = document.getElementById("display");
+    let display2 = document.getElementById("result");
     let expression = display.value;
     let result;
  
@@ -241,8 +281,33 @@ function calculate() {
  
         result = math.evaluate(expression);
         display.value = result;
+        display2.value = '';
     } catch (error) {
         display.value = "Error";
+    }
+}
+
+/* Used to calculate result */
+function calculateResult() {
+    let display = document.getElementById("display");
+    let display2 = document.getElementById("result");
+    let expression = display.value;
+    let result;
+ 
+    try {
+        // Convert trigonometric function inputs from degrees to radians
+        expression = expression.replace(/sin\(/g, 'sin(' + Math.PI / 180 + '*');
+        expression = expression.replace(/cos\(/g, 'cos(' + Math.PI / 180 + '*');
+        expression = expression.replace(/tan\(/g, 'tan(' + Math.PI / 180 + '*');
+ 
+        result = math.evaluate(expression);
+        if ((result != display.value) && ("" != display.value)) {
+			display2.value = result;
+		} else {
+			display2.value = "";
+		}
+    } catch (error) {
+        display2.value = "";
     }
 }
 
@@ -250,61 +315,73 @@ function calculate() {
 function sin() {
     let display = document.getElementById("display");
     display.value += "sin(";
+    calculateResult();
 }
 
 function cos() {
     let display = document.getElementById("display");
     display.value += "cos(";
+    calculateResult();
 }
 
 function tan() {
     let display = document.getElementById("display");
     display.value += "tan(";
+    calculateResult();
 }
 
 function sec() {
     let display = document.getElementById("display");
     display.value += "sec(";
+    calculateResult();
 }
 
 function csc() {
     let display = document.getElementById("display");
     display.value += "csc(";
+    calculateResult();
 }
 
 function cot() {
     let display = document.getElementById("display");
     display.value += "cot(";
+    calculateResult();
 }
 
 function asin() {
     let display = document.getElementById("display");
     display.value += "asin(";
+    calculateResult();
 }
 
 function acos() {
     let display = document.getElementById("display");
     display.value += "acos(";
+    calculateResult();
 }
 
 function atan() {
     let display = document.getElementById("display");
     display.value += "atan(";
+    calculateResult();
 }
 
 function asec() {
     let display = document.getElementById("display");
     display.value += "asec(";
+    calculateResult();
 }
 
 function acsc() {
     let display = document.getElementById("display");
     display.value += "acsc(";
+    calculateResult();
 }
 
 function acot() {
     let display = document.getElementById("display");
     display.value += "acot(";
+    calculateResult();
 }
 
 /** Convertor **/

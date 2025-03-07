@@ -158,7 +158,8 @@
 
 							<div class="calculator-area">
 								<div class="calculator-input">
-									<input class="cpe-input" id="display" type="text">
+									<input class="cpe-input" id="display" type="text" oninput="calculateResult()">
+									<input class="cpe-input is-unaccented" id="result" type="text" readonly>
 								</div>
 								<div class="calculator-buttons">
 									<div class="buttons">
@@ -311,7 +312,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor01_01" value="0" onchange="Convertor01_Result()">
+											<input type="text" class="cpe-input" id="Convertor01_01" value="0" oninput="Convertor01_Result()">
 										</td>
 
 										<td>
@@ -323,7 +324,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="kilometer"><a>Χιλιόμετρα</a></li>
-														<li value="meter"><a>Μέτρα</a></li>
+														<li value="meter" class="selected"><a>Μέτρα</a></li>
 														<li value="decimeter"><a>Δεκατόμετρα</a></li>
 														<li value="centimeter"><a>Εκατοστά</a></li>
 														<li value="millimeter"><a>Χιλιοστά</a></li>
@@ -348,7 +349,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor01_03" value="0" onchange="Convertor01_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor01_03" value="0" oninput="Convertor01_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor01_04" tabindex="-1" onblur="Convertor01_Result()">
@@ -365,7 +366,7 @@
 														<li value="millimeter"><a>Χιλιοστά</a></li>
 														<li value="micrometer"><a>Μικρόμετρα</a></li>
 														<li value="nanometer"><a>Νανόμετρα</a></li>
-														<li value="inch"><a>Ίντσες</a></li>
+														<li value="inch" class="selected"><a>Ίντσες</a></li>
 														<li value="foot"><a>Πόδια</a></li>
 														<li value="yard"><a>Γιάρδες</a></li>
 														<li value="mile"><a>Μίλια</a></li>
@@ -395,7 +396,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor02_01" value="0" onchange="Convertor02_Result()">
+											<input type="text" class="cpe-input" id="Convertor02_01" value="0" oninput="Convertor02_Result()">
 										</td>
 
 										<td>
@@ -407,7 +408,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="km2"><a>Τετραγωνικά Χιλιόμετρα</a></li>
-														<li value="m2"><a>Τετραγωνικά Μέτρα</a></li>
+														<li value="m2" class="selected"><a>Τετραγωνικά Μέτρα</a></li>
 														<li value="dm2"><a>Τετραγωνικά Δεκατόμετρα</a></li>
 														<li value="cm2"><a>Τετραγωνικά Εκατοστά</a></li>
 														<li value="mm2"><a>Τετραγωνικά Χιλιοστά</a></li>
@@ -432,7 +433,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor02_03" value="0" onchange="Convertor02_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor02_03" value="0" oninput="Convertor02_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor02_04" tabindex="-1" onblur="Convertor02_Result()">
@@ -449,7 +450,7 @@
 														<li value="mm2"><a>Τετραγωνικά Χιλιοστά</a></li>
 														<li value="um2"><a>Τετραγωνικά Μικρόμετρα</a></li>
 														<li value="nm2"><a>Τετραγωνικά Νανόμετρα</a></li>
-														<li value="sqin"><a>Τετραγωνικές Ίντσες</a></li>
+														<li value="sqin" class="selected"><a>Τετραγωνικές Ίντσες</a></li>
 														<li value="sqft"><a>Τετραγωνικά Πόδια</a></li>
 														<li value="sqyd"><a>Τετραγωνικές Γιάρδες</a></li>
 														<li value="sqmi"><a>Τετραγωνικά Μίλια</a></li>
@@ -479,7 +480,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor03_01" value="0" onchange="Convertor03_Result()">
+											<input type="text" class="cpe-input" id="Convertor03_01" value="0" oninput="Convertor03_Result()">
 										</td>
 
 										<td>
@@ -491,7 +492,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="km3"><a>Κυβικά Χιλιόμετρα</a></li>
-														<li value="m3"><a>Κυβικά Μέτρα</a></li>
+														<li value="m3" class="selected"><a>Κυβικά Μέτρα</a></li>
 														<li value="litre"><a>Κυβικά Δεκατόμετρα (Λίτρα)</a></li>
 														<li value="millilitre"><a>Κυβικά Εκατοστά (Χιλιoστόλιτρα)</a></li>
 														<li value="mm3"><a>Κυβικά Χιλιοστά</a></li>
@@ -512,7 +513,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor03_03" value="0" onchange="Convertor03_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor03_03" value="0" oninput="Convertor03_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor03_04" tabindex="-1" onblur="Convertor03_Result()">
@@ -529,7 +530,7 @@
 														<li value="mm3"><a>Κυβικά Χιλιοστά</a></li>
 														<li value="um3"><a>Κυβικά Μικρόμετρα</a></li>
 														<li value="nm3"><a>Κυβικά Νανόμετρα</a></li>
-														<li value="cuin"><a>Κυβικές Ίντσες</a></li>
+														<li value="cuin" class="selected"><a>Κυβικές Ίντσες</a></li>
 														<li value="cuft"><a>Κυβικά Πόδια</a></li>
 														<li value="cuyd"><a>Κυβικά Γιάρδα</a></li>
 														<li value="teaspoon"><a>Κουτάλια του γλυκού</a></li>
@@ -555,7 +556,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor04_01" value="0" onchange="Convertor04_Result()">
+											<input type="text" class="cpe-input" id="Convertor04_01" value="0" oninput="Convertor04_Result()">
 										</td>
 
 										<td>
@@ -566,7 +567,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="rad"><a>Ακτίνια</a></li>
+														<li value="rad" class="selected"><a>Ακτίνια</a></li>
 														<li value="deg"><a>Μοίρες</a></li>
 														<li value="grad"><a>Βαθμοί</a></li>
 														<li value="cycle"><a>Κύκλοι</a></li>
@@ -582,7 +583,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor04_03" value="0" onchange="Convertor04_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor04_03" value="0" oninput="Convertor04_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor04_04" tabindex="-1" onblur="Convertor04_Result()">
@@ -593,7 +594,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="rad"><a>Ακτίνια</a></li>
-														<li value="deg"><a>Μοίρες</a></li>
+														<li value="deg" class="selected"><a>Μοίρες</a></li>
 														<li value="grad"><a>Βαθμοί</a></li>
 														<li value="cycle"><a>Κύκλοι</a></li>
 														<li value="arcsec"><a>Τοξοδεύτερα</a></li>
@@ -619,7 +620,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor05_01" value="0" onchange="Convertor05_Result()">
+											<input type="text" class="cpe-input" id="Convertor05_01" value="0" oninput="Convertor05_Result()">
 										</td>
 
 										<td>
@@ -632,7 +633,7 @@
 													<ul class="cpe-list is-linked">
 														<li value="microsecond"><a>Μικροδευτερόλεπτα</a></li>
 														<li value="milliseconds"><a>Χιλιοστά δευτερολέπτου</a></li>
-														<li value="second"><a>Δευτερόλεπτα</a></li>
+														<li value="second" class="selected"><a>Δευτερόλεπτα</a></li>
 														<li value="minute"><a>Λεπτά</a></li>
 														<li value="hour"><a>Ώρες</a></li>
 														<li value="day"><a>Ημέρες</a></li>
@@ -652,7 +653,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor05_03" value="0" onchange="Convertor05_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor05_03" value="0" oninput="Convertor05_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor05_04" tabindex="-1" onblur="Convertor05_Result()">
@@ -665,7 +666,7 @@
 														<li value="microsecond"><a>Μικροδευτερόλεπτα</a></li>
 														<li value="milliseconds"><a>Χιλιοστά δευτερολέπτου</a></li>
 														<li value="second"><a>Δευτερόλεπτα</a></li>
-														<li value="minute"><a>Λεπτά</a></li>
+														<li value="minute" class="selected"><a>Λεπτά</a></li>
 														<li value="hour"><a>Ώρες</a></li>
 														<li value="day"><a>Ημέρες</a></li>
 														<li value="week"><a>Εβδομάδες</a></li>
@@ -695,7 +696,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor06_01" value="0" onchange="Convertor06_Result()">
+											<input type="text" class="cpe-input" id="Convertor06_01" value="0" oninput="Convertor06_Result()">
 										</td>
 
 										<td>
@@ -706,7 +707,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="hertz"><a>Χέρτζ</a></li>
+														<li value="hertz" class="selected"><a>Χέρτζ</a></li>
 														<li value="kilohertz"><a>Κιλοχέρτζ</a></li>
 														<li value="megahertz"><a>Μεγαχέρτζ</a></li>
 														<li value="gigahertz"><a>Γιγαχέρτζ</a></li>
@@ -725,7 +726,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor06_03" value="0" onchange="Convertor06_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor06_03" value="0" oninput="Convertor06_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor06_04" tabindex="-1" onblur="Convertor06_Result()">
@@ -737,7 +738,7 @@
 													<ul class="cpe-list is-linked">
 														<li value="hertz"><a>Χέρτζ</a></li>
 														<li value="kilohertz"><a>Κιλοχέρτζ</a></li>
-														<li value="megahertz"><a>Μεγαχέρτζ</a></li>
+														<li value="megahertz" class="selected"><a>Μεγαχέρτζ</a></li>
 														<li value="gigahertz"><a>Γιγαχέρτζ</a></li>
 														<li value="terahertz"><a>Τεραχέρτζ</a></li>
 														<li value="petahertz"><a>Πεταχέρτζ</a></li>
@@ -765,7 +766,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor07_01" value="0" onchange="Convertor07_Result()">
+											<input type="text" class="cpe-input" id="Convertor07_01" value="0" oninput="Convertor07_Result()">
 										</td>
 
 										<td>
@@ -776,7 +777,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="gram"><a>Γραμμάρια</a></li>
+														<li value="gram" class="selected"><a>Γραμμάρια</a></li>
 														<li value="kilogram"><a>Κιλογραμμάρια</a></li>
 														<li value="ton"><a>Τόνοι</a></li>
 														<li value="grain"><a>Σπόροι</a></li>
@@ -796,7 +797,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor07_03" value="0" onchange="Convertor07_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor07_03" value="0" oninput="Convertor07_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor07_04" tabindex="-1" onblur="Convertor07_Result()">
@@ -809,7 +810,7 @@
 														<li value="gram"><a>Γραμμάρια</a></li>
 														<li value="kilogram"><a>Κιλογραμμάρια</a></li>
 														<li value="ton"><a>Τόνοι</a></li>
-														<li value="grain"><a>Σπόροι</a></li>
+														<li value="grain" class="selected"><a>Σπόροι</a></li>
 														<li value="dram"><a>Δράμια</a></li>
 														<li value="ounce"><a>Ουγγιές</a></li>
 														<li value="poundmass"><a>Λίρες (Λίβρες)</a></li>
@@ -837,7 +838,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor08_01" value="0" onchange="Convertor08_Result()">
+											<input type="text" class="cpe-input" id="Convertor08_01" value="0" oninput="Convertor08_Result()">
 										</td>
 
 										<td>
@@ -848,7 +849,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="kelvin"><a>Κέλβιν</a></li>
+														<li value="kelvin" class="selected"><a>Κέλβιν</a></li>
 														<li value="celsius"><a>Κελσίου</a></li>
 														<li value="fahrenheit"><a>Φαρενάιτ</a></li>
 														<li value="rankine"><a>Ρανκίν</a></li>
@@ -862,7 +863,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor08_03" value="-273.15" onchange="Convertor08_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor08_03" value="-273.15" oninput="Convertor08_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor08_04" tabindex="-1" onblur="Convertor08_Result()">
@@ -873,7 +874,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="kelvin"><a>Κέλβιν</a></li>
-														<li value="celsius"><a>Κελσίου</a></li>
+														<li value="celsius" class="selected"><a>Κελσίου</a></li>
 														<li value="fahrenheit"><a>Φαρενάιτ</a></li>
 														<li value="rankine"><a>Ρανκίν</a></li>
 													</ul>
@@ -897,7 +898,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor09_01" value="0" onchange="Convertor09_Result()">
+											<input type="text" class="cpe-input" id="Convertor09_01" value="0" oninput="Convertor09_Result()">
 										</td>
 
 										<td>
@@ -908,7 +909,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="newton"><a>Νιούτον</a></li>
+														<li value="newton" class="selected"><a>Νιούτον</a></li>
 														<li value="dyne"><a>Ντάιν</a></li>
 														<li value="poundforce"><a>Πάουντφορς</a></li>
 														<li value="kip"><a>Κιπ</a></li>
@@ -922,7 +923,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor09_03" value="0" onchange="Convertor09_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor09_03" value="0" oninput="Convertor09_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select"  id="Convertor09_04" tabindex="-1" onblur="Convertor09_Result()">
@@ -933,7 +934,7 @@
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
 														<li value="newton"><a>Νιούτον</a></li>
-														<li value="dyne"><a>Ντάιν</a></li>
+														<li value="dyne" class="selected"><a>Ντάιν</a></li>
 														<li value="poundforce"><a>Πάουντφορς</a></li>
 														<li value="kip"><a>Κιπ</a></li>
 													</ul>
@@ -957,7 +958,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor10_01" value="0" onchange="Convertor10_Result()">
+											<input type="text" class="cpe-input" id="Convertor10_01" value="0" oninput="Convertor10_Result()">
 										</td>
 
 										<td>
@@ -970,7 +971,7 @@
 													<ul class="cpe-list is-linked">
 														<li value="uJ"><a>Μικροτζάουλ</a></li>
 														<li value="mJ"><a>Χιλιοστά Τζάουλ</a></li>
-														<li value="joule"><a>Τζάουλ</a></li>
+														<li value="joule" class="selected"><a>Τζάουλ</a></li>
 														<li value="kJ"><a>Κιλοτζάουλ</a></li>
 														<li value="MJ"><a>Μεγατζάουλ</a></li>
 														<li value="GJ"><a>Γιγατζάουλ</a></li>
@@ -1003,7 +1004,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor10_03" value="0" onchange="Convertor10_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor10_03" value="0" oninput="Convertor10_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor10_04" tabindex="-1" onblur="Convertor10_Result()">
@@ -1027,7 +1028,7 @@
 														<li value="erg"><a>Ergs</a></li>
 														<li value="uWh"><a>Μικροβατώρες</a></li>
 														<li value="mWh"><a>Χιλιοστά Βατώρων</a></li>
-														<li value="Wh"><a>Βατώρες</a></li>
+														<li value="Wh" class="selected"><a>Βατώρες</a></li>
 														<li value="kWh"><a>Κιλοβατώρες</a></li>
 														<li value="MWh"><a>Μεγαβατώρες</a></li>
 														<li value="GWh"><a>Γιγαβατώρες</a></li>
@@ -1059,7 +1060,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor11_01" value="0" onchange="Convertor11_Result()">
+											<input type="text" class="cpe-input" id="Convertor11_01" value="0" oninput="Convertor11_Result()">
 										</td>
 
 										<td>
@@ -1070,7 +1071,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="W"><a>Βάτ</a></li>
+														<li value="W" class="selected"><a>Βάτ</a></li>
 														<li value="kW"><a>Κιλοβάτ</a></li>
 														<li value="MW"><a>Μεγαβάτ</a></li>
 														<li value="GW"><a>Γιγαβάτ</a></li>
@@ -1090,7 +1091,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor11_03" value="0" onchange="Convertor11_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor11_03" value="0" oninput="Convertor11_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor11_04" tabindex="-1" onblur="Convertor11_Result()">
@@ -1109,7 +1110,7 @@
 														<li value="EW"><a>Εξαβάτ</a></li>
 														<li value="EW"><a>Ζετταβάτ</a></li>
 														<li value="YW"><a>Γιοτταβάτ</a></li>
-														<li value="hp"><a>Ήποι</a></li>
+														<li value="hp" class="selected"><a>Ήποι</a></li>
 													</ul>
 												</div>
 											</div>
@@ -1131,7 +1132,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor12_01" value="0" onchange="Convertor12_Result()">
+											<input type="text" class="cpe-input" id="Convertor12_01" value="0" oninput="Convertor12_Result()">
 										</td>
 
 										<td>
@@ -1144,7 +1145,7 @@
 													<ul class="cpe-list is-linked">
 														<li value="uPa"><a>Μικροπασκάλ</a></li>
 														<li value="mPa"><a>Χιλιοστά Πασκάλ</a></li>
-														<li value="Pa"><a>Πασκάλ</a></li>
+														<li value="Pa" class="selected"><a>Πασκάλ</a></li>
 														<li value="kPa"><a>Κιλοπασκάλ</a></li>
 														<li value="MPa"><a>Μεγαπασκάλ</a></li>
 														<li value="GPa"><a>Γιγαπασκάλ</a></li>
@@ -1169,7 +1170,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor12_03" value="0" onchange="Convertor12_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor12_03" value="0" oninput="Convertor12_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor12_04" tabindex="-1" onblur="Convertor12_Result()">
@@ -1190,7 +1191,7 @@
 														<li value="EPa"><a>Εξαπασκάλ</a></li>
 														<li value="EPa"><a>Ζετταπασκάλ</a></li>
 														<li value="YPa"><a>Γιοτταπασκάλ</a></li>
-														<li value="psi"><a>PSI</a></li>
+														<li value="psi" class="selected"><a>PSI</a></li>
 														<li value="atm"><a>Ατμόσφερες</a></li>
 														<li value="torr"><a>Torr</a></li>
 														<li value="mmHg"><a>Χιλιοστά υδράργυρου</a></li>
@@ -1217,7 +1218,7 @@
 											<label>Από:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor13_01" value="0" onchange="Convertor13_Result()">
+											<input type="text" class="cpe-input" id="Convertor13_01" value="0" oninput="Convertor13_Result()">
 										</td>
 
 										<td>
@@ -1228,7 +1229,7 @@
 												</div>
 												<div class="cpe-dropdown__content is-right-aligned">
 													<ul class="cpe-list is-linked">
-														<li value="b"><a>Μπίτ</a></li>
+														<li value="b" class="selected"><a>Μπίτ</a></li>
 														<li value="kb"><a>Κιλομπίτ</a></li>
 														<li value="Mb"><a>Μεγαμπίτ</a></li>
 														<li value="Gb"><a>Γιγαμπίτ</a></li>
@@ -1272,7 +1273,7 @@
 											<label>Σε:</label> 
 										</td>
 										<td>
-											<input type="text" class="cpe-input" id="Convertor13_03" value="0" onchange="Convertor13_Result(true)">
+											<input type="text" class="cpe-input" id="Convertor13_03" value="0" oninput="Convertor13_Result(true)">
 										</td>
 										<td>
 											<div class="cpe-dropdown cpe-select is-flipped"  id="Convertor13_04" tabindex="-1" onblur="Convertor13_Result()">
@@ -1299,7 +1300,7 @@
 														<li value="Eib"><a>Εξμπιμπίτ</a></li>
 														<li value="Eib"><a>Ζεμπιμπίτ</a></li>
 														<li value="Yib"><a>Γιομπιμπίτ</a></li>
-														<li value="B"><a>Μπάιτ</a></li>
+														<li value="B" class="selected"><a>Μπάιτ</a></li>
 														<li value="kB"><a>Κιλομπάιτ</a></li>
 														<li value="MB"><a>Μεγαμπάιτ</a></li>
 														<li value="GB"><a>Γιγαμπάιτ</a></li>
@@ -1353,6 +1354,17 @@
 								<input type="radio" name="AppTheme" id="AppTheme04" onclick="ColorScheme('dark')"><label for="AppTheme04">Σκουρόχρωμο</label>
 								</details>
 								<div style="margin:5px 0;"><small>Αυτή η ρύθμιση ορίζει το θέμα συσκευής της Αριθμομηχανής</small></div>
+							</div>
+
+							<div class="cpe-settings-fieldset Windowing">
+								<details class="cpe-settings-fieldset__content" open>
+								<summary><h2>
+								<span translate="no" class="cpe-icon material-icons">select_window</span>
+								Παραθύρα
+								</h2></summary>
+								<input type="checkbox" name="Windowing" id="Windowing01" title="Η Διαχείριση Εργασιών θα είναι πάνω από τα υπόλοιπα παράθυρα"><label for="Windowing01" title="Η Αριθμομηχανή θα είναι πάνω από τα υπόλοιπα παράθυρα">Πάντα στην κορυφή</label>
+								<br>
+								</details>
 							</div>
 
 						</article>

@@ -1280,14 +1280,29 @@ main.performance footer.upper {
 
 .calculator-area .calculator-input {
 	display:flex;
+	flex-wrap:wrap;
 }
 
 .calculator-area .calculator-input .cpe-input {
-            padding-top:min(18px,3vh);
-            padding-bottom:min(18px,3vh);
             width:100%;
-            font-size: min(48px, 6vh);
             text-align: right;
+}
+
+.calculator-area .calculator-input .cpe-input#display {
+            padding-top:min(14px,2.4vh);
+            padding-bottom:min(14px,2.4vh);
+            font-size: min(48px, 6vh);
+            border-bottom-left-radius:0;
+            border-bottom-right-radius:0;
+}
+
+.calculator-area .calculator-input .cpe-input#result {
+            padding-top:min(9px,1.5vh);
+            padding-bottom:min(9px,1.5vh);
+            font-size: min(36px, 4.5vh);
+            border-top-left-radius:0;
+            border-top-right-radius:0;
+            color:var(--input-box-solid);
 }
 
 .calculator-area .calculator-buttons {
@@ -1306,8 +1321,8 @@ main.performance footer.upper {
 .calculator-area .calculator-buttons .buttons .cpe-button {
 	flex:1 1 16.6%;
 	font-size:min(18px, 3vh);
-    padding-top:min(18px,1vh);
-    padding-bottom:min(18px,1vh);	
+    padding-top:min(14px,1vh);
+    padding-bottom:min(14px,1vh);	
     padding-left:1px;
     padding-right:1px;
     overflow:hidden;
@@ -1344,7 +1359,7 @@ main.performance footer.upper {
 }
 
 .convertor_page .cpe-input {
-	min-width:100px;
+	min-width:86px;
 }
 
 .convertor_page .cpe-select .cpe-input .cpe-select__value {
